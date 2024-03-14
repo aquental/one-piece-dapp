@@ -150,3 +150,12 @@ Subgraph endpoints:
 Queries (HTTP):     https://api.studio.thegraph.com/query/68007/onepiece/v0.0.1
 
 ```
+
+
+### security
+```shell
+tar cvf env.tar .env ./one-piece-frontend-boilerplate/.env
+gpg -c --armor --cipher-algo AES256 --no-symkey-cache --output env.asc env.tar
+
+gpg --decrypt --no-symkey-cache --output env.tar env.asc
+```
